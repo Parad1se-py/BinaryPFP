@@ -22,7 +22,7 @@ class ImageMaker:
 
         for i in range(8):
             for j in range(8):
-                if i == 0:
+                if j == 0:
                     if positions[i][j] == 1:
                         bg.paste(clr_asset, (j * 8, i * 8))
                     else:
