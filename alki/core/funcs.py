@@ -26,4 +26,9 @@ class ImageMaker:
                 if positions[i][j] == 1:
                     bg.paste(clr_asset, (j * 32, i * 32))
 
+        for i in positions:
+            i.reverse()
+
         bg.save('profile.png')
+
+positions = pos.create_pos_lists()
