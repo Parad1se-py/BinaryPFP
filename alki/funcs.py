@@ -32,6 +32,9 @@ class ImageMaker:
                         bg.paste(clr_asset, ((j * 8) + (j * 8), (i * 8) + (i * 8)))
                     else:
                         bg.paste(white, ((j * 8) + (j * 8), (i * 8) + (i * 8)))
+
+        bg.save('profile.png')
+
                 # elif i == 1:
                 #     if positions[i][j] == 1:
                 #         bg.paste(clr_asset, ((j * 8) + 8, (i * 8) + 8))
@@ -67,7 +70,3 @@ class ImageMaker:
                 #         bg.paste(clr_asset, ((j * 8) + 56, (i * 8) + 56))
                 #     else:
                 #         bg.paste(white, ((j * 8) + 56, (i * 8) + 56))
-
-        bg.save('profile.png')
-
-positions = pos.create_pos_lists()
