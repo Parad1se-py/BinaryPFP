@@ -13,6 +13,19 @@ class ImageMaker:
         self.color = color.lower()
 
     def bit_64_maker(self):
+        """
+        Makes a 64x64 image using the function in binary_pfp\pos.py.
+
+        It uses the function in binary_pfp\pos.py to make a 64x64 image
+        of the 64x64 array of 0 and 1 integers. It then converts the
+        image to a PIL image and saves it as a PNG file.
+
+        Parameters:
+        None
+
+        Returns:
+        None, just saves an image.
+        """
         color = self.color
         bg = Image.open('./assets/imgs/64-64.png')
         clr_asset = Image.open('./assets/imgs/' + color + '.png')
