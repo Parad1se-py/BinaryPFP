@@ -1,7 +1,3 @@
-import os
-import random
-from io import BytesIO
-
 import PIL
 from PIL import Image
 
@@ -9,7 +5,20 @@ import binary_pfp.pos as pos
 
 
 class ImageMaker:
+    """
+    This is a class for making Binary PFPs.
+
+    Attributes:
+        color (str): The color of the PFP.
+    """
+
     def __init__(self, color):
+        """
+        Initializes the ImageMaker class.
+
+        Parameters:
+            color (str): The color of the PFP.
+        """
         self.color = color.lower()
 
     def bit_64_maker(self):
