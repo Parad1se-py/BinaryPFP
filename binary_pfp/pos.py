@@ -1,22 +1,22 @@
 import random
 
 def create_pos_lists():
-    list1 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list2 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list3 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list4 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list5 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list6 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list7 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
-    list8 = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
+    list1 = [random.randint(0, 1) for _ in range(4)]
+    list2 = [random.randint(0, 1) for _ in range(4)]
+    list3 = [random.randint(0, 1) for _ in range(4)]
+    list4 = [random.randint(0, 1) for _ in range(4)]
+    list5 = [random.randint(0, 1) for _ in range(4)]
+    list6 = [random.randint(0, 1) for _ in range(4)]
+    list7 = [random.randint(0, 1) for _ in range(4)]
+    list8 = [random.randint(0, 1) for _ in range(4)]
 
-    list1_rev = list(reversed(list1.copy()))
-    list2_rev = list(reversed(list2.copy()))
-    list3_rev = list(reversed(list3.copy()))
-    list4_rev = list(reversed(list4.copy()))
-    list5_rev = list(reversed(list5.copy()))
-    list6_rev = list(reversed(list6.copy()))
-    list7_rev = list(reversed(list7.copy()))
-    list8_rev = list(reversed(list8.copy()))
-
-    return [list1 + list1_rev, list2 + list2_rev, list3 + list3_rev, list4 + list4_rev, list5 + list5_rev, list6 + list6_rev, list7 + list7_rev, list8 + list8_rev]
+    return [
+        list1 + list(reversed(list1.copy())),
+        list2 + list(reversed(list2.copy())),
+        list3 + list(reversed(list3.copy())),
+        list4 + list(reversed(list4.copy())),
+        list5 + list(reversed(list5.copy())),
+        list6 + list(reversed(list6.copy())),
+        list7 + list(reversed(list7.copy())),
+        list8 + list(reversed(list8.copy()))
+    ]
