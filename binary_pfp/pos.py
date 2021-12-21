@@ -14,9 +14,9 @@ def create_pos_lists():
     list2_rev = list(reversed(list2.copy()))
     list3_rev = list(reversed(list3.copy()))
     list4_rev = list(reversed(list4.copy()))
-    list5_rev = list(reversed(list4.copy()))
-    list6_rev = list(reversed(list4.copy()))
-    list7_rev = list(reversed(list4.copy()))
-    list8_rev = list(reversed(list4.copy()))
+    list5_rev = list(reversed(list5.copy()))
+    list6_rev = list(reversed(list6.copy()))
+    list7_rev = list(reversed(list7.copy()))
+    list8_rev = list(reversed(list8.copy()))
 
     return [list1 + list1_rev, list2 + list2_rev, list3 + list3_rev, list4 + list4_rev, list5 + list5_rev, list6 + list6_rev, list7 + list7_rev, list8 + list8_rev]

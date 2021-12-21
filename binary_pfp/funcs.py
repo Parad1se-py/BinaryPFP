@@ -5,7 +5,7 @@ from io import BytesIO
 import PIL
 from PIL import Image
 
-import alki.pos as pos
+import binary_pfp.pos as pos
 
 
 class ImageMaker:
@@ -20,18 +20,25 @@ class ImageMaker:
 
         positions = pos.create_pos_lists()
 
-        for i in range(8):
-            for j in range(8):
-                if j == 0:
-                    if positions[i][j] == 1:
-                        bg.paste(clr_asset, (j * 8, i * 8))
-                    else:
-                        bg.paste(white, (j * 8, i * 8))
+        for i in range(len(positions)):
+            for j in range(len(positions[i])):
+                if positions[i][j] == 1:
+                    bg.paste(clr_asset, (j * 8, i * 8))
                 else:
-                    if positions[i][j] == 1:
-                        bg.paste(clr_asset, ((j * 8) + (j * 8), (i * 8) + (i * 8)))
-                    else:
-                        bg.paste(white, ((j * 8) + (j * 8), (i * 8) + (i * 8)))
+                    bg.paste(white, (j * 8, i * 8))
+
+        # for i in range(8):
+        #     for j in range(8):
+        #         if j == 0:
+        #             if positions[i][j] == 1:
+        #                 bg.paste(clr_asset, (j * 8, i * 8))
+        #             else:
+        #                 bg.paste(white, (j * 8, i * 8))
+        #         else:
+        #             if positions[i][j] == 1:
+        #                 bg.paste(clr_asset, ((j * 8) + (j * 8), (i * 8) + (i * 8)))
+        #             else:
+        #                 bg.paste(white, ((j * 8) + (j * 8), (i * 8) + (i * 8)))
 
         bg.save('profile.png')
 
