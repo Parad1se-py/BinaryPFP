@@ -9,10 +9,11 @@ def create_pos_lists():
     in the list are a mirror image of the last 4.
     
     Parameters:
-    None
+        None
     
     Returns:
-    2d array of randomly generated 0 and 1 integers"""
+        2d array of randomly generated 0 and 1 integers
+    """
 
     return [
         (x:=[random.randint(0, 1) for _ in range(4)])+x[::-1] for _ in range(8)

@@ -30,11 +30,12 @@ class ImageMaker:
         image to a PIL image and saves it as a PNG file.
 
         Parameters:
-        None
+            None
 
         Returns:
-        None, just saves an image.
+            None, just saves an image.
         """
+        
         color = self.color
         bg = Image.open('./assets/imgs/64-64.png')
         clr_asset = Image.open('./assets/imgs/' + color + '.png')
