@@ -1,8 +1,10 @@
-from binary_pfp.funcs import ImageMaker
+from src.funcs import ImageMaker
 
-color = input("What do you want as the color?\n\t>>> ")
+color = input("What do you want as the first color?\n\t>>> ")
+color2 = input("What do you want as the second color?\n\t>>> ")
 
-avatar = ImageMaker(color)
-avatar.bit_64_maker()
+avatar = ImageMaker()
+avatar.basic_pfp_maker(color=color)
+avatar.alternating_pfp_maker(color_1=color, color_2=color2)
 
 print("PFP made!")
